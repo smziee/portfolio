@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Simple Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="calculator-container">
+
+    <div id="history-container"></div>
+    <input type="text" id="display" disabled placeholder="0">
+
+    <div class="buttons">
+        <button onclick="clearDisplay()">AC</button>
+        <button onclick="percent()">%</button>
+        <button onclick="backspace()">←</button>
+        <button onclick="updateDisplay('/')">÷</button>
+
+        <button onclick="updateDisplay('7')">7</button>
+        <button onclick="updateDisplay('8')">8</button>
+        <button onclick="updateDisplay('9')">9</button>
+        <button onclick="updateDisplay('*')">×</button>
+
+        <button onclick="updateDisplay('4')">4</button>
+        <button onclick="updateDisplay('5')">5</button>
+        <button onclick="updateDisplay('6')">6</button>
+        <button onclick="updateDisplay('-')">−</button>
+
+        <button onclick="updateDisplay('1')">1</button>
+        <button onclick="updateDisplay('2')">2</button>
+        <button onclick="updateDisplay('3')">3</button>
+        <button onclick="updateDisplay('+')">+</button>
+
+        <button onclick="updateDisplay('00')">00</button>
+        <button onclick="updateDisplay('0')">0</button>
+        <button onclick="updateDisplay('.')">.</button>
+        <button onclick="calculate()" class="design-btn">=</button>
+    </div>
+
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
