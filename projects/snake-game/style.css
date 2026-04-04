@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #12071f, #1c1033, #09060f);
+  color: white;
+}
+
+.game-wrapper {
+  width: 100%;
+  padding: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 2rem;
+  letter-spacing: 1px;
+}
+
+.subtitle {
+  margin: 0 0 20px;
+  color: #d3c6f5;
+  font-size: 0.95rem;
+}
+
+.hud {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.score-box,
+.status-box {
+  flex: 1;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 16px;
+  padding: 12px;
+  text-align: center;
+}
+
+.score-box span,
+.status-box span {
+  display: block;
+  font-size: 0.8rem;
+  color: #cfc3ec;
+  margin-bottom: 4px;
+}
+
+.score-box strong,
+.status-box strong {
+  font-size: 1.2rem;
+  color: #ffffff;
+}
+
+canvas {
+  display: block;
+  margin: 0 auto 14px;
+  background: #0a0a0f;
+  border: 3px solid #a46bff;
+  border-radius: 18px;
+  box-shadow: 0 0 25px rgba(164, 107, 255, 0.25);
+}
+
+.controls-text {
+  margin: 0 0 18px;
+  color: #d3c6f5;
+  font-size: 0.95rem;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+button {
+  border: none;
+  outline: none;
+  padding: 12px 18px;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.15s ease, opacity 0.15s ease;
+  background: #a46bff;
+  color: white;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  opacity: 0.92;
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+.quit-btn {
+  background: #ff5c8a;
+}
+
+@media (max-width: 560px) {
+  .game-card {
+    padding: 20px;
+  }
+
+  canvas {
+    width: 100%;
+    height: auto;
+  }
+
+  .hud {
+    flex-direction: column;
+  }
+}
+#restartBtn {
+  display: none;
+}

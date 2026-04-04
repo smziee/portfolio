@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Snake Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="game-wrapper">
+    <div class="game-card">
+      <h1>Snake Game</h1>
+      <p class="subtitle">Classic arcade vibes with a cleaner look.</p>
+
+      <div class="hud">
+        <div class="score-box">
+          <span>Score</span>
+          <strong id="score">0</strong>
+        </div>
+        <div class="status-box">
+          <span>Status</span>
+          <strong id="status">Ready</strong>
+        </div>
+      </div>
+
+      <canvas id="gameCanvas" width="400" height="400"></canvas>
+
+      <p class="controls-text">Use the arrow keys to move</p>
+
+      <div class="button-group">
+        <button id="startBtn">Start Game</button>
+        <button id="restartBtn">Restart</button>
+        <button id="quitBtn" class="quit-btn">Quit</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
